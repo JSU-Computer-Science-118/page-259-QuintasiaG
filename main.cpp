@@ -2,68 +2,79 @@
 
 #include <iostream>
 #include <cmath>
+#include <iomanip>
+
+
 using namespace std;
-int main()
 
+
+int main() 
 {
-double a, b, c, d;
+  
+    int a, b, c;
+    double disc = 0;
+    double root1, root2;
 
-cout << "Enter the value of a (coefficient "
 
-<< "of square of X) : ";
+    cout << "Enter the value of a (the coefficient of x^2): ";
 
-cin >> a;
+    cin >> a;
 
-cout << "Enter the value of b (coefficient "
+ 
+    cout << "Enter the value of b (the coefficient of x): ";
 
-<< "of X) : ";
+ 
+    cin >> b;
 
-cin >> b;
+    cout << "Enter the value of c (the constant term): ";
 
-cout << "Enter the constant term c : ";
 
-cin >> c;
+    cin >> c;
 
-d = ((pow(b, 2)) - (4 * a * c));
+    cout << fixed << setprecision(2);
 
-if (d < 0)
 
-cout << "The roots are imaginary." << endl;
+    disc = (b*b) - 4*(a*c);
 
-else
 
-{
+    if(disc < 0)
+    {
+        cout << endl 
+            << "The equation has two complex roots." 
+            << endl;
+    }
 
-if (d == 0)
 
-{
+    else if(disc == 0)
+    {
+        cout << endl 
+            << "The equation has a single (repeated) root." 
+            << endl;
 
-cout << "The roots are real and equal"
+  
+        root1 = (0-b)/(double)(2*a);
+        
+ 
+        cout << "Root 1 = Root 2 = " << root1 << endl;
+    }
 
-<< endl;
+ 
+    else
+    {
+        cout << endl 
+            << "The equation has two real roots." 
+            << endl;
 
-cout << "The roots are " << (-b / (2 * a))
+        root1 = ((0-b) + pow(disc, 0.5))/(double)(2*a);
 
-<< " and " << (-b / (2 * a)) << endl;
+        root2 = ((0-b) - pow(disc, 0.5))/(double)(2*a);
 
+   
+        cout << "Root 1 = " << root1 << endl;
+        cout << "Root 2 = " << root2 << endl;
+    }
+
+ 
+    return 0;
 }
 
-else
-
-{
-
-cout << "The roots are real and unequal.\n";
-
-d = pow(d, 0.5);
-
-cout << "The roots are "
-
-<< ((-b + d) / (2 * a))
-
-<< " and " << ((-b - d) / (2 * a))<< endl;
-}
-
-system("pause");
-return 0;
-}
-}
