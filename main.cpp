@@ -25,17 +25,17 @@ int main()
         root2 = (-b - sqrt(pow(b,2.0)-4*a*c)) / (2 * a);
     
     if (discriminant==0) 
-        cout << "The single root is" << root1<<endl;
+        cout << " The single root is " << root1<<endl;
      if (discriminant>0) 
-        cout << "Two real roots" << endl;
+        cout << " Two real roots " << endl;
       if (discriminant>0) 
      cout << "- First root"<< root1<<endl;       
     if  (discriminant>0) 
-       cout << "- Second root" <<root2<<endl;
+       cout << "- Second roo t" <<root2<<endl;
         
       
    if (discriminant<0) 
-       cout << "Complex roots" << endl;
+       cout << " Complex roots " << endl;
      
         
     
