@@ -12,6 +12,10 @@ int main()
   
     discriminant = b * b - 4 * a * c;
    
+    discriminant = (pow(b,2.0))-4*a*c;
+        root1 = (-b -sqrt(discriminant)) / (2 * a);
+        root2 = (-b - sqrt(discriminant)) / (2 * a);
+    
     if (a == 0 || discriminant < 0) 
         cout << "The single root is" << root1<<endl;
      if (discriminant == 0) 
@@ -21,9 +25,7 @@ int main()
        
     if  (discriminant == 0) 
        cout << "Second root" <<root2<<endl;
-         discriminant = sqrt(discriminant);
-        root1 = (-b + discriminant) / (2 * a);
-        root2 = (-b - discriminant) / (2 * a);
+        
         cout << "Roots are " << root1 << " and " << root2 << endl;
    if (discriminant == 0) 
        cout << "Complex roots" << endl;
@@ -33,5 +35,8 @@ int main()
     return 0; 
     }
         
+    
+
+ 
     
 
