@@ -8,11 +8,7 @@ int main()
 {
     double a, b, c, discriminant, root1, root2;
     
-    cin>>a;
-    cin>>b;
-    cin>>c;
-  
-   
+ 
     
     if(a==0)
        {
