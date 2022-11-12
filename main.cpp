@@ -21,7 +21,7 @@ int main()
              }
    
     discriminant = (pow(b,2.0)-4*a*c) ;
-        root1 = (-b -sqrt(pow(b,2.0)-4*a*c)) / (2 * a);
+        root1 = (-b + sqrt(pow(b,2.0)-4*a*c)) / (2 * a);
         root2 = (-b - sqrt(pow(b,2.0)-4*a*c)) / (2 * a);
     
     if (discriminant==0) 
